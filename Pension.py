@@ -8,11 +8,11 @@ class VerificaccionPension():
         try:
             self.insalubres = i//4
         except:
-            print("Numero de años bajo condiciones insalubres invalido")
+            print("Numero de años bajo condiciones insalubres invalido. Debe ser entero")
         try:
             self.inicio = datetime.datetime(self.año, self.mes, self.dia)
         except:
-            print("Fecha no valida")
+            print("Fecha no valida. Formato DD/MM/YY")
         assert (self.inicio < self.today)
         assert(self.sexo == 'M' or self.sexo == 'F')
         if(self.insalubres > 5):
