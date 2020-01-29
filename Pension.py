@@ -10,6 +10,7 @@ class VerificaccionPension():
         except:
             print("Fecha no valida")
         assert (self.inicio < self.today)
+        assert(self.sexo == 'M' or self.sexo == 'F')
     def _EsPensionado(self):
        if(self.sexo == 'M')and( (self.today - self.inicio).days) >= 365:
             print("Es pensionado")
