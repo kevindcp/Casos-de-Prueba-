@@ -8,3 +8,4 @@ class VerificaccionPension():
             self.inicio = datetime.datetime(self.año, self.mes, self.dia)
         except:
             print("Fecha no valida")
+        assert (self.inicio < self.today)
