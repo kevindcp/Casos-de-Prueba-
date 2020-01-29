@@ -18,9 +18,9 @@ class VerificaccionPension():
         if(self.insalubres > 5):
             self.insalubres = 5
     def _EsPensionado(self):
-       if(self.sexo == 'M')and( (self.today - self.inicio).days) >= 365:
+        if(self.sexo == 'M')and( (self.today - self.inicio).days) >= 365*(60-self.insalubres):
             print("Es pensionado")
-        elif(self.sexo == 'F')and( (self.today - self.inicio).days) >= 365:
+        elif(self.sexo == 'F')and( (self.today - self.inicio).days) >= 365*(55 - self.insalubres):
             print("Es pensionada")
         else:
             print("No es pensionado")
